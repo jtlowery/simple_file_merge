@@ -1,10 +1,14 @@
 #!/usr/bin/env Rscript
 
+repo <- "http://cran.us.r-project.org"
 if (!require("argparser")) {
-  install.packages("argparser")
+  install.packages("argparser", repos=repo)
 }
 if (!require("methods")) {
-  install.packages("methods")
+  install.packages("methods", repos=repo)
+}
+if (!require("assertthat")) {
+  install.packages("assertthat", repos=repo)
 }
 
 script_msg <- "
